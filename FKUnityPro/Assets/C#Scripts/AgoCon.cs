@@ -21,10 +21,6 @@ public class AgoCon : MonoBehaviour
         move -= 0.0058f;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        Debug.Log("b");
-    }
     private void OnTriggerStay2D(Collider2D other)
     {
         Debug.Log("a");
