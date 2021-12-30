@@ -8,16 +8,16 @@ public class Tes : MonoBehaviour
 
     void Start()
     {
-        move = 0.2f;
+        move = 0.12f;
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            move = 0.2f;
+            move = 0.12f;
         }
         this.transform.position += new Vector3(0f, move, 0f);
-        move -= 0.01f;
+        move -= 0.0058f;
     }
 }
