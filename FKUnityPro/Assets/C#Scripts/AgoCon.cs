@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tes : MonoBehaviour
+public class AgoCon : MonoBehaviour
 {
     float move;
 
