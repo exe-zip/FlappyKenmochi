@@ -58,5 +58,9 @@ public class AgoCon : MonoBehaviour
             transform.Rotate(0f, 0f, -20f);
             die_move -= 0.005f;
         }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
