@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class AgoCon : MonoBehaviour
 {
-    float move, rotate;
+    float move, rotate, die_move;
     bool damage;
 
     void Start()
     {
         move = 0.12f;
         damage = false;
+        die_move = 0.1f;
     }
 
     void Update()
     {
-        Jump();
-        Fall();
-        Debug.Log(damage);
+        if (damage)
+        {
+            Die();
+        }
+        else
+        {
+            Jump();
+            Fall();
+        }
     }
 
     void OnTriggerStay2D(Collider2D other)
@@ -41,5 +48,15 @@ public class AgoCon : MonoBehaviour
         this.transform.eulerAngles += new Vector3(0f, 0f, rotate);
         move -= 0.0058f;
         rotate -= 0.04f;
+    }
+
+    void Die()
+    {
+        if (this.transform.position.y > -10f)
+        {
+            this.transform.position += new Vector3(0.05f, die_move, 0f);
+            transform.Rotate(0f, 0f, -20f);
+            die_move -= 0.005f;
+        }
     }
 }
