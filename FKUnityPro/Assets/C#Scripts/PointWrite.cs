@@ -21,9 +21,6 @@ public class PointWrite : MonoBehaviour
 
     public void PointPlus()
     {
-        if (!Ago.GetComponent<AgoCon>().damage)
-        {
-            point++;
-        }
+        point++;
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -4146398185098534693}
   m_Layer: 0
   m_Name: Yubi
-  m_TagString: Untagged
+  m_TagString: Yubi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5ee213cced246d58efba6300940c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ago: {fileID: 4806822694444102276, guid: 94362f72f1c64444ea628d46af64ac83, type: 3}
+  Ago: {fileID: 0}
   GM: {fileID: 0}
 --- !u!1 &2944978982888320349
 GameObject:

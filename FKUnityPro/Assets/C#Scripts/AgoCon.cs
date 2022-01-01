@@ -9,9 +9,7 @@ public class AgoCon : MonoBehaviour
 
     void Start()
     {
-        move = 0.12f;
-        damage = false;
-        die_move = 0.1f;
+        FirstSet();
     }
 
     void Update()
@@ -30,6 +28,14 @@ public class AgoCon : MonoBehaviour
     void OnTriggerStay2D(Collider2D other)
     {
         damage = true;
+    }
+
+    public void FirstSet()
+    {
+        this.transform.position = new Vector3(-3f, 0f, 0f);
+        move = 0.12f;
+        damage = false;
+        die_move = 0.1f;
     }
 
     void Jump()
@@ -57,6 +63,7 @@ public class AgoCon : MonoBehaviour
             this.transform.position += new Vector3(0.05f, die_move, 0f);
             transform.Rotate(0f, 0f, -20f);
             die_move -= 0.005f;
+            Destroy(this.gameObject);
         }
     }
 }

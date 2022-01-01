@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class YubiCon : MonoBehaviour
 {
-    public GameObject GM;
+    public GameObject Ago, GM;
     int move;
 
     void Start()
     {
         this.transform.position = new Vector3(10f, Random.Range(-2.5f, 2.5f), 0f);
+        Ago = GameObject.Find("Ago(Clone)");
         GM = GameObject.Find("GameManager");
         move = 0;
     }
@@ -25,7 +26,7 @@ public class YubiCon : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        if (move == 260)   
+        if (move == 260 && Ago)    
         {
             GM.GetComponent<PointWrite>().PointPlus();
         }
