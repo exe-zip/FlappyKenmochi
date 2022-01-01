@@ -5,7 +5,7 @@ using UnityEngine;
 public class AgoCon : MonoBehaviour
 {
     float move, rotate, die_move;
-    bool damage;
+    public bool damage;
 
     void Start()
     {
@@ -57,10 +57,6 @@ public class AgoCon : MonoBehaviour
             this.transform.position += new Vector3(0.05f, die_move, 0f);
             transform.Rotate(0f, 0f, -20f);
             die_move -= 0.005f;
-        }
-        else
-        {
-            Destroy(this.gameObject);
         }
     }
 }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2944978982469997289}
-  - component: {fileID: 2944978982469997286}
+  - component: {fileID: -4146398185098534693}
   m_Layer: 0
   m_Name: Yubi
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2944978982469997286
+--- !u!114 &-4146398185098534693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5ee213cced246d58efba6300940c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Ago: {fileID: 4806822694444102276, guid: 94362f72f1c64444ea628d46af64ac83, type: 3}
+  GM: {fileID: 0}
 --- !u!1 &2944978982888320349
 GameObject:
   m_ObjectHideFlags: 0
