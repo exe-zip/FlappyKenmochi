@@ -34,7 +34,7 @@ public class AgoCon : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
             move = 0.12f;
             rotate = 0f;
