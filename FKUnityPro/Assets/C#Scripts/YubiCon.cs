@@ -16,18 +16,21 @@ public class YubiCon : MonoBehaviour
 
     void Update()
     {
-        if (this.transform.position.x > -10f)
+        if(GM.GetComponent<GameCon>().game_mode == 1)
         {
-            this.transform.position += new Vector3(-0.05f, 0f, 0f);
-            move++;
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-        if (move == 270 && GM.GetComponent<GameCon>().game_mode == 1)    
-        {
-            GM.GetComponent<PointWrite>().PointPlus();
+            if (this.transform.position.x > -10f)
+            {
+                this.transform.position += new Vector3(-0.05f, 0f, 0f);
+                move++;
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+            if (move == 270 && GM.GetComponent<GameCon>().game_mode == 1)
+            {
+                GM.GetComponent<PointWrite>().PointPlus();
+            }
         }
     }
 }

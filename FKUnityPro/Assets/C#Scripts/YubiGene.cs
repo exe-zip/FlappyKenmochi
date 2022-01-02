@@ -15,7 +15,7 @@ public class YubiGene : MonoBehaviour
     void Update()
     {
         deltime += Time.deltaTime;
-        if (deltime > 1.5f)
+        if (deltime > 1.5f && this.gameObject.GetComponent<GameCon>().game_mode == 1) 
         {
             Instantiate(Yubi);
             deltime = 0f;

@@ -20,6 +20,7 @@ public class AgoCon : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 GM.GetComponent<GameCon>().game_mode = 1;
+                this.transform.eulerAngles = new Vector3(0f, 0f, 20f);
             }
             PreGame();
         }
