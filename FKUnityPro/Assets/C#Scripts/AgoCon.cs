@@ -4,38 +4,51 @@ using UnityEngine;
 
 public class AgoCon : MonoBehaviour
 {
+    public GameObject GM;
     float move, rotate, die_move;
-    public bool damage;
 
     void Start()
     {
+        GM = GameObject.Find("GameManager");
         FirstSet();
     }
 
     void Update()
     {
-        if (damage)
+        if (GM.GetComponent<GameCon>().game_mode == 0)
         {
-            Die();
+            if (Input.GetMouseButtonDown(0))
+            {
+                GM.GetComponent<GameCon>().game_mode = 1;
+            }
+            PreGame();
         }
-        else
+        else if (GM.GetComponent<GameCon>().game_mode == 1) 
         {
             Jump();
             Fall();
+        }
+        else
+        {
+            Die();
         }
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
-        damage = true;
+        GM.GetComponent<GameCon>().game_mode = 2;
     }
 
     public void FirstSet()
     {
         this.transform.position = new Vector3(-3f, 0f, 0f);
         move = 0.12f;
-        damage = false;
         die_move = 0.1f;
+    }
+
+    void PreGame()
+    {
+        this.transform.eulerAngles += new Vector3(0f, 0f, 3f);
     }
 
     void Jump()
@@ -58,6 +71,7 @@ public class AgoCon : MonoBehaviour
 
     void Die()
     {
+        GM.GetComponent<GameCon>().game_mode = 2;
         if (this.transform.position.y > -10f)
         {
             if (this.transform.position.y > -6f)

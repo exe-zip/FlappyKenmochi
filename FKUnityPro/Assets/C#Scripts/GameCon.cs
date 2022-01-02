@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameCon : MonoBehaviour
 {
     public GameObject Ago;
+    public int game_mode;
+
     void Start()
     {
         GameStart();
@@ -18,6 +20,7 @@ public class GameCon : MonoBehaviour
     public void GameStart()
     {
         DestriyObjects();
+        game_mode = 0;
         Instantiate(Ago);
         this.gameObject.GetComponent<PointWrite>().point = 0;
     }
