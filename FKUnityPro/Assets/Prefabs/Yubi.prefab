@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -4146398185098534693}
   m_Layer: 0
   m_Name: Yubi
-  m_TagString: Yubi
+  m_TagString: Destroy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

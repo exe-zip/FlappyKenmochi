@@ -17,11 +17,17 @@ public class GameCon : MonoBehaviour
 
     public void GameStart()
     {
-        GameObject[] yubi_list = GameObject.FindGameObjectsWithTag("Yubi");
-        foreach (GameObject yubis in yubi_list)
-        {
-            Destroy(yubis);
-        }
+        DestriyObjects();
         Instantiate(Ago);
+        this.gameObject.GetComponent<PointWrite>().point = 0;
+    }
+
+    void DestriyObjects()
+    {
+        GameObject[] destroy_list = GameObject.FindGameObjectsWithTag("Destroy");
+        foreach (GameObject objects in destroy_list)
+        {
+            Destroy(objects);
+        }
     }
 }

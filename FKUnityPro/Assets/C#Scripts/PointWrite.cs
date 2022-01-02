@@ -5,7 +5,7 @@ using TMPro;
 
 public class PointWrite : MonoBehaviour
 {
-    int point;
+    public int point;
     public TextMeshProUGUI point_counter;
     public GameObject Ago;
 

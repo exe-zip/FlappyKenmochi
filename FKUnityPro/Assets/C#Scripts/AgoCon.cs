@@ -60,10 +60,16 @@ public class AgoCon : MonoBehaviour
     {
         if (this.transform.position.y > -10f)
         {
-            this.transform.position += new Vector3(0.05f, die_move, 0f);
-            transform.Rotate(0f, 0f, -20f);
-            die_move -= 0.005f;
-            Destroy(this.gameObject);
+            if (this.transform.position.y > -6f)
+            {
+                this.transform.position += new Vector3(0.05f, die_move, 0f);
+                transform.Rotate(0f, 0f, -20f);
+                die_move -= 0.005f;
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
